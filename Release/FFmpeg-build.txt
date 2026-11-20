@@ -1,0 +1,10 @@
+ReelPrompt uses FFmpeg 9.0.2 under the GNU Lesser General Public License version 2.1 or later. The unmodified corresponding FFmpeg source archive and license text are included in this folder.
+
+FFmpeg is dynamically linked. No GPL or nonfree FFmpeg components were enabled.
+
+FFmpeg build configuration:
+./configure --prefix=/opt/reelprompt-ffmpeg --disable-autodetect --disable-everything --disable-static --enable-shared --disable-doc --disable-ffplay --disable-ffprobe --disable-network --enable-ffmpeg --enable-protocol=file,pipe --enable-demuxer=mov,matroska,avi,mpegts,flv,gif,image2 --enable-muxer=mp4 --enable-parser=h264,hevc,mpeg4video,vp8,vp9,av1,mpegvideo,mjpeg --enable-decoder=h264,hevc,mpeg4,vp8,vp9,av1,gif,mjpeg,prores,rawvideo,mpeg2video --enable-encoder=mpeg4 --enable-filter=scale,setsar,format --enable-swscale --install-name-dir=@rpath --extra-ldflags=-Wl,-rpath,@loader_path/../lib
+make -j8
+make install DESTDIR=<staging-directory>
+
+Other bundled Python distributions include their license texts in their respective package and .dist-info directories. OpenCV distributes its FFmpeg libraries under LGPL v2.1; see opencv_python*.dist-info/METADATA. The Huihui model is downloaded separately; its terms are available at https://huggingface.co/divinetribe/Huihui-Qwen3-VL-32B-Instruct-abliterated-4bit-mlx.
