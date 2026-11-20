@@ -12,4 +12,4 @@ Processing is local and sets Hugging Face offline mode. The Settings download bu
 
 The app uses [Huihui Qwen3-VL 32B MLX](https://huggingface.co/divinetribe/Huihui-Qwen3-VL-32B-Instruct-abliterated-4bit-mlx), [MLX-VLM](https://github.com/Neywa-Labs/mlx-vlm), and [PySceneDetect](https://github.com/Breakthrough/PySceneDetect). Each dependency and the model has its own license.
 
-This is an early source release, not a packaged or notarized binary. The installer and settings have not been tested on a second Mac.
+The installer and settings have not been tested on a second Mac. The `Release/` folder contains source for the self-contained release candidate and FFmpeg build details; the source installer described above builds the earlier source version, not that release candidate.
